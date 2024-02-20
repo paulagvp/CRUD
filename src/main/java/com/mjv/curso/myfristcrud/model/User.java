@@ -1,11 +1,9 @@
 package com.mjv.curso.myfristcrud.model;
-
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tb_usuario")
+@Table(name = "Tabela de usuário")
 public class User {
-
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -23,19 +21,15 @@ public class User {
     @Column(name = "e-mail")
     private String email;
 
-    @Column(name = "senha")
-    private String password;
-
     public User(){
     }
 
-    public User(Long id, String name, String fullName, Integer age, String email, String password) {
+    public User(Long id, String name, String fullName, Integer age, String email) {
         this.id = id;
         this.name = name;
         this.fullName = fullName;
         this.age = age;
         this.email = email;
-        this.password = password;
     }
 
     public Long getId() {
@@ -78,14 +72,6 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     @Override
     public String toString() {
         return "User{" +
@@ -94,7 +80,6 @@ public class User {
                 ", fullName='" + fullName + '\'' +
                 ", age=" + age +
                 ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
                 '}';
     }
 }

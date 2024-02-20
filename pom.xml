@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mjv.curso</groupId>
-	<artifactId>my-frist-crud</artifactId>
+	<artifactId>Quiz-Paula</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>my-frist-crud</name>
 	<description>Demo project for Spring Boot</description>
