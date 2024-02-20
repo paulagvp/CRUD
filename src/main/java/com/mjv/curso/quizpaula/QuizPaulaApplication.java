@@ -1,4 +1,4 @@
-package com.mjv.curso.myfristcrud;
+package com.mjv.curso.quizpaula;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

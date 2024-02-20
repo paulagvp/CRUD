@@ -1,4 +1,4 @@
-package com.mjv.curso.myfristcrud.model;
+package com.mjv.curso.quizpaula.model;
 
 import jakarta.persistence.*;
 
@@ -9,9 +9,13 @@ import jakarta.persistence.*;
 public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "Id")
     private Long id;
+    @Column(name = "Tema")
     private String theme;
+    @Column(name = "Questão")
     private String question;
+    @Column(name = "Resposta")
     private String answer;
 
     public Question(){

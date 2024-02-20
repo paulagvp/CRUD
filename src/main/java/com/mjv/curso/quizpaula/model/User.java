@@ -1,4 +1,4 @@
-package com.mjv.curso.myfristcrud.model;
+package com.mjv.curso.quizpaula.model;
 import jakarta.persistence.*;
 
 @Entity
@@ -6,19 +6,19 @@ import jakarta.persistence.*;
 public class User {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "Id")
     private Long id;
 
-    @Column(name = "nome")
+    @Column(name = "Nome")
     private String name;
 
-    @Column(name = "nome_completo")
+    @Column(name = "Nome Completo")
     private String fullName;
 
-    @Column(name = "idade")
+    @Column(name = "Idade")
     private Integer age;
 
-    @Column(name = "e-mail")
+    @Column(name = "E-mail")
     private String email;
 
     public User(){
