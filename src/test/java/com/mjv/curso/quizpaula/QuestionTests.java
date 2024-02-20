@@ -16,6 +16,13 @@ class QuestionTests {
 		Question questionQueQueroSalvar = new Question("Cinema","Qual o nome do cinema que tem no shopping Recife?","UCI");
 		questionService.saveQuestion(questionQueQueroSalvar);
 		System.out.println("Retorno salvado:" + questionQueQueroSalvar);
+
+		questionQueQueroSalvar.setTheme("Localização");
+		questionService.saveQuestion(questionQueQueroSalvar);
+		System.out.println("Foi feita a alteração:" + questionQueQueroSalvar);
+
+		questionService.deleteQuestion(questionQueQueroSalvar);
+		System.out.println("Questão apagada.");
 	}
 
 }
