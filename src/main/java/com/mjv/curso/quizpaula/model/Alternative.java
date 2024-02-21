@@ -58,46 +58,4 @@ public class Alternative {
                 ", corretAlternative=" + corretAlternative +
                 '}';
     }
-
-    public static final class Builder {
-        private Long id;
-        private String alternative;
-        private Boolean corretAlternative;
-
-        public Builder() {
-        }
-
-        public Builder(Alternative other) {
-            this.id = other.id;
-            this.alternative = other.alternative;
-            this.corretAlternative = other.corretAlternative;
-        }
-
-        public static Builder anAlternative() {
-            return new Builder();
-        }
-
-        public Builder id(Long id) {
-            this.id = id;
-            return this;
-        }
-
-        public Builder alternative(String alternative) {
-            this.alternative = alternative;
-            return this;
-        }
-
-        public Builder corretAlternative(Boolean corretAlternative) {
-            this.corretAlternative = corretAlternative;
-            return this;
-        }
-
-        public Alternative build() {
-            Alternative alternative = new Alternative();
-            alternative.setId(id);
-            alternative.setAlternative(String.valueOf(alternative));
-            alternative.setCorretAlternative(corretAlternative);
-            return alternative;
-        }
-    }
 }
