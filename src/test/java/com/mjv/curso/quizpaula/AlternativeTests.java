@@ -15,7 +15,15 @@ public class AlternativeTests {
     private AlternativeService alternativeService;
 
     @Test
-    void chamaSequenciaCrud(){
+    void chamaSequenciaCrud() {
+
+        for (int i = 1; i < 10; i++) {
+            onChamarSequencia();
+            System.out.println("posição:" + i);
+        }
+    }
+
+    private void onChamarSequencia() {
         List<Alternative> alternativeList = getListaAlternativaValores();
 
         alternativeService.saveList(alternativeList);
