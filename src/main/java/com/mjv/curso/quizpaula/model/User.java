@@ -2,23 +2,23 @@ package com.mjv.curso.quizpaula.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Tabela de usuário")
+@Table(name = "tb_usuário")
 public class User {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
-    @Column(name = "Id")
+    @Column(name = "id")
     private Long id;
 
-    @Column(name = "Nome")
+    @Column(name = "nome")
     private String name;
 
-    @Column(name = "Nome Completo")
+    @Column(name = "nome_completo")
     private String fullName;
 
-    @Column(name = "Idade")
+    @Column(name = "idade")
     private Integer age;
 
-    @Column(name = "E-mail")
+    @Column(name = "email")
     private String email;
 
     public User(){

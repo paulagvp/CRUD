@@ -1,6 +1,5 @@
 package com.mjv.curso.quizpaula.service;
 
-import com.mjv.curso.quizpaula.model.Question;
 import com.mjv.curso.quizpaula.model.User;
 import com.mjv.curso.quizpaula.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
