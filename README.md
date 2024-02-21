@@ -1,4 +1,4 @@
-# PROJETO QUIZ #
+# PROJETO QUIZ - MJV School #
 
 Projeto desenvolvido durante o curso de Java oferecido pela MJV School ministrado pelo professor Samuel, com a finalidade de criar um sistema de quiz 
 conectado a um banco de dados. 
