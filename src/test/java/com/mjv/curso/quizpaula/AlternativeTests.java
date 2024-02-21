@@ -16,6 +16,16 @@ public class AlternativeTests {
 
     @Test
     void chamaSequenciaCrud(){
+        List<Alternative> alternativeList = getListaAlternativaValores();
+
+        alternativeService.saveList(alternativeList);
+        System.out.println("lista salva" + alternativeList);
+
+        alternativeService.deleteList(alternativeList);
+        System.out.println("Lista deletada.");
+    }
+
+    private List<Alternative> getListaAlternativaValores() {
         List<Alternative> alternativeList = new ArrayList<>();
 
         Alternative testeParaSalvarAlternativa = new Alternative("A", false);
@@ -23,19 +33,12 @@ public class AlternativeTests {
         Alternative testeParaSalvarAlternativa2 = new Alternative("C", false);
         Alternative testeParaSalvarAlternativa3 = new Alternative("D", true);
 
-
         alternativeList.add(testeParaSalvarAlternativa1);
         alternativeList.add(testeParaSalvarAlternativa2);
         alternativeList.add(testeParaSalvarAlternativa3);
         alternativeList.add(testeParaSalvarAlternativa);
 
-        alternativeService.saveList(alternativeList);
-        System.out.println("lista salva" + alternativeList);
-        alternativeService.deleteList(alternativeList);
-        System.out.println("Lista deletada.");
-
-
-
-
+        return alternativeList;
     }
+
 }
