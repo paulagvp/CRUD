@@ -2,18 +2,18 @@ package com.mjv.curso.quizpaula.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Tabela de Alternativas")
+@Table(name = "tb_alternativas")
 
 public class Alternative {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "Id")
+    @Column(name = "id")
     private Long id;
 
-    @Column(name = "Alternativa")
+    @Column(name = "alternativa")
     private String alternative;
 
-    @Column(name = "Alternativa correta")
+    @Column(name = "alternativa_correta")
     private Boolean corretAlternative;
 
     public Alternative(){

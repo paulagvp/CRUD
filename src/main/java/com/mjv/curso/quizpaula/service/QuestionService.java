@@ -24,6 +24,7 @@ public class QuestionService {
 
     //apagarQuestão
     public void deleteQuestion(Question question) {
+
         questionRepository.delete(question);
     }
 }

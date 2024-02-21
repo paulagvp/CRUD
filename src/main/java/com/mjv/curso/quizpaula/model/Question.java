@@ -3,19 +3,19 @@ package com.mjv.curso.quizpaula.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Tabela de questões")
+@Table(name = "tb_questões")
 
 
 public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "Id")
+    @Column(name = "id")
     private Long id;
-    @Column(name = "Tema")
+    @Column(name = "tema")
     private String theme;
-    @Column(name = "Questão")
+    @Column(name = "questão")
     private String question;
-    @Column(name = "Resposta")
+    @Column(name = "resposta")
     private String answer;
 
     public Question(){
