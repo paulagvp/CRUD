@@ -22,6 +22,7 @@ conectado a um banco de dados.
 
 O projeto ainda está em andamento, com o objetivo de adotar o modelo de arquitetura de software MVC (Model-View-Controller). Esse modelo sugere uma abordagem estruturada para dividir as responsabilidades de forma mais clara e eficiente.
 
-![img_1.png](img_1.png)
+![img_3.png](img_3.png)
+*Até o momento foram criadas as etapas em laranja no diagrama.
 
  
