@@ -1,6 +1,6 @@
-package com.mjv.curso.quizpaula.model;
+package com.mjv.quizpaula.model;
 import jakarta.persistence.*;
-
+@SequenceGenerator(name = "tb_alternativas_seq", allocationSize = 1)
 @Entity
 @Table(name = "tb_alternativas")
 
@@ -14,15 +14,20 @@ public class Alternative {
     private String alternative;
 
     @Column(name = "alternativa_correta")
-    private Boolean corretAlternative;
+    private Boolean correctAlternative;
 
     public Alternative(){
-
     }
-    public Alternative(Long id, String alternative, Boolean corretAlternative) {
+
+    public Alternative(Long id, String alternative, Boolean correctAlternative) {
         this.id = id;
         this.alternative = alternative;
-        this.corretAlternative = corretAlternative;
+        this.correctAlternative = correctAlternative;
+    }
+
+    public Alternative(String alternative, Boolean correctAlternative) {
+        this.alternative = alternative;
+        this.correctAlternative = correctAlternative;
     }
 
     public Long getId() {
@@ -41,12 +46,12 @@ public class Alternative {
         this.alternative = alternative;
     }
 
-    public Boolean getCorretAlternative() {
-        return corretAlternative;
+    public Boolean getCorrectAlternative() {
+        return correctAlternative;
     }
 
-    public void setCorretAlternative(Boolean corretAlternative) {
-        this.corretAlternative = corretAlternative;
+    public void setCorrectAlternative(Boolean correctAlternative) {
+        this.correctAlternative = correctAlternative;
     }
 
 
@@ -55,7 +60,7 @@ public class Alternative {
         return "Alternative{" +
                 "id=" + id +
                 ", alternative='" + alternative + '\'' +
-                ", corretAlternative=" + corretAlternative +
+                ", correctAlternative=" + correctAlternative +
                 '}';
     }
 }

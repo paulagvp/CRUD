@@ -1,6 +1,6 @@
-package com.mjv.curso.quizpaula.model;
+package com.mjv.quizpaula.model;
 import jakarta.persistence.*;
-
+@SequenceGenerator(name = "tb_usuario_seq", allocationSize = 1)
 @Entity
 @Table(name = "tb_usuario")
 public class User {
@@ -26,6 +26,13 @@ public class User {
 
     public User(Long id, String name, String fullName, Integer age, String email) {
         this.id = id;
+        this.name = name;
+        this.fullName = fullName;
+        this.age = age;
+        this.email = email;
+    }
+
+    public User(String name, String fullName, Integer age, String email) {
         this.name = name;
         this.fullName = fullName;
         this.age = age;

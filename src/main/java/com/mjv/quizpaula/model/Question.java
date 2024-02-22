@@ -1,7 +1,11 @@
-package com.mjv.curso.quizpaula.model;
+package com.mjv.quizpaula.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
+//Para que a geração de ID fique em sequência.
+@SequenceGenerator(name = "tb_questoes_seq", allocationSize = 1)
 @Entity
 @Table(name = "tb_questões")
 
@@ -11,27 +15,25 @@ public class Question {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
-    @Column(name = "tema")
-    private String theme;
+
     @Column(name = "questão")
     private String question;
-    @Column(name = "resposta")
-    private String answer;
+
+    @Column(name = "tema")
+    private String theme;
 
     public Question(){
     }
 
-    public Question(Long id, String theme, String question, String answer) {
+    public Question(Long id, String question, String theme) {
         this.id = id;
-        this.theme = theme;
         this.question = question;
-        this.answer = answer;
+        this.theme = theme;
     }
 
-    public Question(String theme, String question, String answer) {
-        this.theme = theme;
+    public Question(String question, String theme) {
         this.question = question;
-        this.answer = answer;
+        this.theme = theme;
     }
 
     public Long getId() {
@@ -42,14 +44,6 @@ public class Question {
         this.id = id;
     }
 
-    public String getTheme() {
-        return theme;
-    }
-
-    public void setTheme(String theme) {
-        this.theme = theme;
-    }
-
     public String getQuestion() {
         return question;
     }
@@ -58,22 +52,21 @@ public class Question {
         this.question = question;
     }
 
-    public String getAnswer() {
-        return answer;
+    public String getTheme() {
+        return theme;
     }
 
-    public void setAnswer(String answer) {
-        this.answer = answer;
+    public void setTheme(String theme) {
+        this.theme = theme;
     }
-
 
     @Override
     public String toString() {
         return "Question{" +
                 "id=" + id +
-                ", theme='" + theme + '\'' +
                 ", question='" + question + '\'' +
-                ", answer='" + answer + '\'' +
+                ", theme='" + theme + '\'' +
                 '}';
     }
 }
+
